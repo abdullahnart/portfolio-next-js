@@ -1,0 +1,179 @@
+import React, { useState, useMemo, useEffect } from 'react';
+import { supabase } from '@/lib/supabase';
+import ProjectCard, { Project } from './ProjectCard';
+import ProjectModal from './ProjectModal';
+
+const categories = ['All', 'Web', 'Mobile', 'Branding'];
+
+const Projects: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Fetch projects from Supabase
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        setLoading(true);
+        const { data, error } = await supabase
+          .from('projects')
+          .select('*')
+          .order('display_order', { ascending: true });
+
+        if (error) throw error;
+
+        // Transform database fields to match component interface
+        const transformedProjects: Project[] = (data || []).map((p) => ({
+          id: p.id,
+          title: p.title,
+          category: p.category,
+          description: p.description,
+          image: p.image,
+          techStack: p.tech_stack,
+          liveUrl: p.live_url,
+          githubUrl: p.github_url,
+        }));
+
+        setProjects(transformedProjects);
+      } catch (err) {
+        console.error('Error fetching projects:', err);
+        setError('Failed to load projects');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
+  const filteredProjects = useMemo(() => {
+    if (activeCategory === 'All') return projects;
+    return projects.filter((project) => project.category === activeCategory);
+  }, [activeCategory, projects]);
+
+  const handleViewDetails = (project: Project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedProject(null), 300);
+  };
+
+  const getCategoryCount = (category: string) => {
+    return projects.filter((p) => p.category === category).length;
+  };
+
+  return (
+    <section id="projects" className="py-24 bg-[#1a1f36]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium rounded-full mb-4">
+            Portfolio
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Featured Projects
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            A curated selection of my best work across web development, mobile apps, and brand design.
+          </p>
+        </div>
+
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 ${
+                activeCategory === category
+                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/25'
+                  : 'bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white'
+              }`}
+            >
+              {category}
+              {category !== 'All' && (
+                <span className="ml-2 text-xs opacity-60">
+                  ({getCategoryCount(category)})
+                </span>
+              )}
+            </button>
+          ))}
+        </div>
+
+        {/* Loading State */}
+        {loading && (
+          <div className="flex justify-center items-center py-20">
+            <div className="flex flex-col items-center gap-4">
+              <div className="w-12 h-12 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin" />
+              <p className="text-gray-400">Loading projects...</p>
+            </div>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && !loading && (
+          <div className="text-center py-20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {error}
+            </div>
+          </div>
+        )}
+
+        {/* Projects Grid */}
+        {!loading && !error && (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {filteredProjects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                onViewDetails={handleViewDetails}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Empty State */}
+        {!loading && !error && filteredProjects.length === 0 && (
+          <div className="text-center py-20">
+            <p className="text-gray-400">No projects found in this category.</p>
+          </div>
+        )}
+
+        {/* View All Button */}
+        {!loading && !error && projects.length > 0 && (
+          <div className="text-center mt-12">
+            <button className="group inline-flex items-center gap-2 px-8 py-4 border border-gray-600 hover:border-indigo-500 text-white font-semibold rounded-xl transition-all duration-300 hover:bg-indigo-500/10">
+              View All Projects
+              <svg
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Project Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
+    </section>
+  );
+};
+
+export default Projects;
