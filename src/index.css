@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 
 @tailwind base;
@@ -131,3 +131,368 @@
 .markdown-preview ol {
   @apply my-4 ml-6;
 }
+
+
+/*--------------------------
+  Hero Section
+----------------------------*/
+.ms-hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ms-hero .ms-diamond-1 {
+  width: 80px;
+  height: 100px;
+  position: absolute;
+  left: 22%;
+  top: 15%;
+  background-image: url("/img/designs/1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
+.ms-hero .ms-diamond-2 {
+  width: 81px;
+  height: 86px;
+  position: absolute;
+  left: 15%;
+  bottom: 20%;
+  background-image: url("/img/designs/2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: rotateshape 15s linear infinite;
+  opacity: 0.1;
+}
+
+@keyframes rotateshape {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hero-content {
+  margin: 90px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.ms-hero-detail {
+  max-width: 300px;
+  text-align: right;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.ms-hero-title {
+  margin: -70px -110px 30px 0;
+  font-size: 56px;
+  font-weight: 800;
+}
+
+.ms-hero-title .name {
+  color: #448a85; /* Example primary color */
+}
+
+/*--------------------------
+  About Section
+----------------------------*/
+.ms-about-detail h4 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.ms-about-detail .ms-text {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #cccccc;
+  line-height: 28px;
+}
+
+.ms-about-info {
+  padding-top: 30px;
+  display: flex;
+}
+
+.ms-about-info ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ms-about-info li {
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 18px;
+  color: #cccccc;
+  display: flex;
+  border-bottom: 1px dashed #444444;
+}
+
+.ms-about-info li:first-child {
+  border-top: 1px dashed #444444;
+}
+
+.ms-about-info .title {
+  min-width: 110px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/*--------------------------
+  Portfolio Section
+----------------------------*/
+.ms-portfolio .section-title .ligh-title {
+  transform: translateY(-63%);
+}
+
+.portfolio-tabs ul li {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 10px;
+  font-weight: 600;
+  margin: 0px 10px;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.portfolio-tabs ul li:hover {
+  color: #448a85; /* primary color */
+}
+
+.ms-project-box {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 30px;
+  position: relative;
+  cursor: default;
+  border-radius: 15px;
+  background: #1c1e22;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
+}
+
+.ms-project-box h3 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ms-project-box a {
+  font-size: 14px;
+  color: #999999;
+  font-weight: 300;
+}
+
+.ms-project-box a:hover {
+  color: #448a85;
+}
+
+/*--------------------------
+  Service Section
+----------------------------*/
+.service-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-box .main-box {
+  position: relative;
+  perspective: 1000px;
+}
+
+.service-box .box-front,
+.service-box .box-back {
+  border-radius: 15px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.5, 1.3, 0.5, 1.3);
+}
+
+.service-box .box-front {
+  text-align: center;
+  background: #1c1e22;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+}
+
+.service-box .box-back {
+  background-color: #448a85;
+  transform: rotateY(-180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+/*--------------------------
+  Contact Section
+----------------------------*/
+.ms-contact iframe {
+  width: 100%;
+  height: 308px;
+  margin-bottom: -7px;
+  border-radius: 30px;
+}
+
+.ms-contact form .form-group input,
+.ms-contact form .form-group textarea {
+  padding: 15px;
+  border-color: #444444;
+  border-radius: 15px;
+  font-size: 15px;
+  color: #cccccc;
+  background-color: #1c1e22;
+}
+
+.ms-contact form .form-group input::placeholder,
+.ms-contact form .form-group textarea::placeholder {
+  color: #999999;
+}
+
+.ms-contact .ms-box {
+  margin-bottom: 30px;
+  padding: 30px;
+  background: #1c1e22;
+  border-radius: 15px;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/*--------------------------
+  Experience / Resume Section
+----------------------------*/
+.education h4,
+.experiense h4 {
+  margin-bottom: 50px;
+  font-size: 23px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ms-experience .timeline li {
+  margin-bottom: 48px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: #202337;
+}
+
+.ms-experience .timeline-info span {
+    padding: 10px 15px;
+    background: #252940;
+    border-radius: 30px;
+    color: #ffffff85;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.ms-experience .timeline li:hover .timeline-info span {
+    background: #448a85;
+    color: #fff;
+
+}
+.section-title h2 {
+    margin-bottom: 40px;
+    padding: 50px 0;
+    font-size: 36px;
+    line-height: 29px;
+    font-weight: 700;
+}
+.section-title h2 span {
+    color: #716fff;
+}
+.section-title {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.ms-experience .row {
+    display: flex;
+    gap: 20px;
+}
+.timeline-content p {
+    margin-top: 8px;
+    font-size: 15px;
+    color: #a5a3b3;
+}
+.section-title .ligh-title {
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 60%;
+    right: 0;
+    font-size: 130px;
+    font-weight: 700;
+    color: #202337;
+    line-height: 60px;
+    text-shadow: 5px -5px 10px #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    opacity: 0.12;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    z-index: 0;
+}
+
+section#experience {
+    padding: 80px 0;
+}
+/*--------------------------
+  Counter Section
+----------------------------*/
+.achive .count-block {
+  width: 100%;
+  margin: 12px 0;
+  padding: 30px 15px;
+  background: #1c1e22;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.achive .count-block h3 {
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 700;
+  color: #cccccc;
+}
+
+.achive .count-block .active-num {
+  color: #448a85;
+}
+li.timeline-item {
+    position: relative;
+}
+.timeline-info {
+    margin-top: -40px;
+    margin-bottom: 30px;
+}
+
+.ms-experience .timeline li:hover .timeline-info span {
+    background: #4f46e5;
+    color: #fff;
+}
+
+.timeline-content {
+    color: #a5a3b3;
+}
+
+.timeline-content .timeline-title .sub {
+    margin-left: 15px;
+    color: #bbb;
+    font-size: 14px;
+}
+
+h5.timeline-title {color: #4f46e5;}

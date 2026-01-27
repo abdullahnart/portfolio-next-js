@@ -8,7 +8,7 @@ import Blog from './Blog';
 import Contact from './Contact';
 import Footer from './Footer';
 
-const profileImage = 'https://d64gsuwffb70l.cloudfront.net/6970c8a99e4ef2eb1ce0384f_1768999154728_087e7d00.jpg';
+const profileImage = '/images/prof.png';
 
 const AppLayout: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');

@@ -68,7 +68,124 @@ const Projects: React.FC = () => {
     return projects.filter((p) => p.category === category).length;
   };
 
+const educationData = [
+  {
+    date: "June 15, 2013 - 2016",
+    title: "Master in Computer Engineering",
+    sub: "First Class",
+    description:
+      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+    delay: 400,
+  },
+  {
+    date: "June 12, 2010 - 2013",
+    title: "Bachelor in Computer Engineering",
+    sub: "First Class",
+    description:
+      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+    delay: 600,
+  },
+  {
+    date: "June 1, 2009 - 2010",
+    title: "Higher Secondary",
+    sub: "(A+)",
+    description:
+      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+    delay: 800,
+  },
+];
+
+const experienceData = [
+  {
+    date: "March 12, 2020",
+    title: "Envato",
+    sub: "Team Leader",
+    description:
+      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+  },
+  {
+    date: "January 23, 2018 - 2020",
+    title: "Facebook Company",
+    sub: "Sr. Developer",
+    description:
+      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+  },
+  {
+    date: "July 23, 2016 - 2018",
+    title: "Twitter Company",
+    sub: "Jr. Developer",
+    description:
+      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+  },
+];
+
+  
   return (
+    <>
+        <section id="experience" className="ms-experience padding-tb-80">
+      <div className="container">
+                  <div className="section-title">
+            <h2>
+              My <span>Resume</span>
+            </h2>
+            <span className="ligh-title">Achievements</span>
+          </div>
+        <div className="row">
+
+          {/* Education Column */}
+          <div className="col-lg-6 col-md-12 col-sm-12">
+            <div className="education ms-ex-box m-b-991">
+              <h4>Education</h4>
+              <ul className="timeline">
+                {educationData.map((edu, index) => (
+                  <li
+                    key={index}
+                    className="timeline-item"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                    data-aos-delay={edu.delay}
+                  >
+                    <div className="timeline-info">
+                      <span>{edu.date}</span>
+                    </div>
+                    <div className="timeline-content">
+                      <h5 className="timeline-title">
+                        {edu.title}
+                        <span className="sub">- {edu.sub}</span>
+                      </h5>
+                      <p>{edu.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Experience Column */}
+          <div className="col-lg-6 col-md-12 col-sm-12">
+            <div className="experiense ms-ex-box">
+              <h4>Experience</h4>
+              <ul className="timeline">
+                {experienceData.map((exp, index) => (
+                  <li key={index} className="timeline-item">
+                    <div className="timeline-info">
+                      <span>{exp.date}</span>
+                    </div>
+                    <div className="timeline-content">
+                      <h5 className="timeline-title">
+                        {exp.title}
+                        <span className="sub">- {exp.sub}</span>
+                      </h5>
+                      <p>{exp.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="projects" className="py-24 bg-[#1a1f36]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -173,6 +290,7 @@ const Projects: React.FC = () => {
         onClose={handleCloseModal}
       />
     </section>
+    </>
   );
 };
 

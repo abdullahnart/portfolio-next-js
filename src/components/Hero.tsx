@@ -152,11 +152,11 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, profileImage }) => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      <div className="z-50 absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
         <span className="text-gray-400 text-sm">Scroll to explore</span>
-        <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center p-2">
+        <a className='exp' href = "#experience"><div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center p-2">
           <div className="w-1.5 h-3 bg-indigo-500 rounded-full animate-bounce" />
-        </div>
+        </div></a>
       </div>
     </section>
   );
