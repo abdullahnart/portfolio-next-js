@@ -496,3 +496,287 @@ li.timeline-item {
 }
 
 h5.timeline-title {color: #4f46e5;}
+
+/* Back to top */
+.progress-wrap {
+  position: fixed;
+  right: 15px;
+  bottom: 80px;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 1.5px rgb(255 255 255);
+  z-index: 12;
+  transform: translateY(15px);
+  transition: all 200ms linear;
+  background: #181a2d;
+}
+/* Inner icon */
+/*===== Whatsapp direct chat css =====*/
+.ms-style {
+  display: inline-block;
+  position: fixed;
+  letter-spacing: 0.1px;
+  z-index: 13;
+}
+
+/* Button */
+.ms-style .ms-button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+/* WhatsApp icon */
+.ms-style .ms-button .whatsapp {
+  width: 23px;
+  height: 23px;
+  background-image: url(../images/common/whatsapp.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: table;
+  margin-right: 0;
+  font-size: 25px;
+  text-align: center;
+  line-height: 38px;
+  cursor: pointer;
+  color: #2ab674;
+}
+
+/* Panel */
+.ms-style .ms-panel {
+  display: none;
+  margin-bottom: 5px;
+  width: 275px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.479);
+  /* background-color: #fff; */
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Panel header */
+.ms-style .ms-panel .ms-header {
+  padding: 12px 15px 15px;
+  text-align: center;
+  color: #fff;
+  background: #2ab674;
+}
+
+/* Panel body */
+.ms-style .ms-panel .ms-body {
+  min-width: 250px;
+  white-space: nowrap;
+  list-style: none;
+  overflow-y: auto;
+}
+
+/* Header text */
+.ms-style .ms-header strong {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.ms-style .ms-header p {
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/* List */
+.ms-style .ms-list .d-flex {
+  display: flex;
+}
+
+.ms-style .ms-list .ms-img-cont {
+  position: relative;
+}
+
+.ms-style .ms-list .ms-user-img {
+  height: 50px;
+  width: 50px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+/* Status icon */
+.ms-style .ms-list .ms-status-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 1px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #a0a0a0;
+}
+
+.ms-style .ms-list .ms-online {
+  background-color: #2ab674;
+}
+
+.ms-style .ms-list .ms-offline {
+  background-color: #a0a0a0;
+}
+
+/* User info */
+.ms-style .ms-list .ms-user-info {
+  margin-top: 0;
+  margin-bottom: auto;
+  margin-left: 15px;
+}
+
+.ms-style .ms-list .ms-user-info span {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #9c9aab;
+}
+
+.ms-style .ms-list .ms-user-info p {
+  margin-bottom: 0;
+  color: #9c9aab;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+/* Body hover */
+.ms-style .ms-body:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ms-style .ms-body:hover .ms-user-img {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Body list */
+.ms-style .ms-body ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ms-style .ms-body li {
+  margin: 0;
+  padding: 10px;
+  display: block;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  list-style-type: none;
+  transition: all 0.3s ease-in-out;
+  background-color: #202337;
+}
+
+.ms-style .ms-body li:not(:last-child) {
+  border-bottom: 1px solid #2c2f42;
+}
+
+.ms-style .ms-body li:hover {
+  background-color: #181a2e;
+}
+
+/* Right bottom position */
+.ms-right-bottom {
+  bottom: 15px;
+  right: 15px;
+  float: right;
+}
+
+.ms-right-bottom .ms-box {
+  background-color: #2ab674;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.ms-right-bottom .ms-box i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.ms-right-bottom .ms-box:hover {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade in animation */
+@keyframes ms-fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-moz-keyframes ms-fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes ms-fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-ms-keyframes ms-fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-o-keyframes ms-fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Rotate animations */
+.rotateForward {
+  animation-name: rotateF;
+  animation-duration: 0.65s;
+  animation-iteration-count: 1;
+}
+
+@keyframes rotateF {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotateBackward {
+  animation-name: rotateB;
+  animation-duration: 0.65s;
+  animation-iteration-count: 1;
+}
+
+@keyframes rotateB {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Before pseudo element */
+/* .progress-wrap::before {
+  position: absolute;
+  font-family: "unicons";
+  content: "\e84b";
+  text-align: center;
+  line-height: 46px;
+  font-size: 24px;
+  opacity: 0;
+  background-image: linear-gradient(298deg, var(--red), var(--yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  left: 0;
+  top: 0;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  z-index: 2;
+  transition: all 200ms linear;
+} */
+
+/* Hover effects */
+
+/* Active state */
+

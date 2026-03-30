@@ -1,11 +1,40 @@
 import React from 'react';
-
+import { useState, useRef, useEffect } from "react";
 interface FooterProps {
   onNavigate: (section: string) => void;
 }
 
+
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const currentYear = new Date().getFullYear();
+
+  const [isOpen, setIsOpen] = useState(false);
+  const panelRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  // Toggle panel open/close
+  const togglePanel = (e) => {
+    e.stopPropagation();
+    setIsOpen((prev) => !prev);
+  };
+
+
+  // Close panel if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        panelRef.current &&
+        !panelRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
 
   const footerLinks = {
     navigation: [
@@ -168,7 +197,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © {currentYear} Alex Chen. All rights reserved.
+              © {currentYear} Abdullah Naseem. All rights reserved.
             </p>
             <div className="flex gap-6">
               <a href="/privacy" className="text-gray-500 hover:text-gray-300 text-sm transition-colors">
@@ -181,6 +210,71 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
       </div>
+          <div className="progress-wrap active-progress">
+      <a href="#home" className="relative z-10 h-full items-center justify-center flex text-white">
+        <i className="fa-sharp fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+<div className="ms-style ms-right-bottom">
+      {/* Chat Panel */}
+      <div
+        ref={panelRef}
+        className="ms-panel"
+        style={{
+          display: isOpen ? "block" : "none",
+          opacity: isOpen ? 1 : 0,
+          height: isOpen ? "auto" : 0,
+          transition: "all 0.6s ease",
+          overflow: "hidden",
+        }}
+        onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+      >
+        <div className="ms-header">
+          <strong>Need Help?</strong>
+          <p>Chat with us on WhatsApp</p>
+        </div>
+        <div className="ms-body">
+          <ul>
+            <li>
+              <a
+              href='https://web.WhatsApp.com/send?phone=923248204797&text=Hello%2C%20I%20would%20like%20to%20get%20in%20touch%20with%20you.'
+              target='blank'
+                className="ms-list"
+                data-number="923248204797"
+              >
+                <div className="d-flex bd-highlight">
+                  <div className="ms-img-cont">
+                    <img
+                      src="/images/w-icon.png"
+                      className="ms-user-img"
+                      alt="Profile image"
+                    />
+                    <span className="ms-status-icon ms-online"></span>
+                  </div>
+                  <div className="ms-user-info">
+                    <span>Abdullah Naseem</span>
+                    <p>Abdullah is online</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Chat Button */}
+      <div className="ms-right-bottom">
+        <div className="ms-box">
+          <div
+            ref={buttonRef}
+            className={`ms-button ${isOpen ? "rotateForward" : "rotateBackward"}`}
+            onClick={togglePanel}
+          >
+            <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
     </footer>
   );
 };

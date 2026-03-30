@@ -10,7 +10,7 @@ const skills = [
 ];
 
 const technologies = [
-  { name: 'React', icon: '⚛️' },
+  { name: 'WordPress', icon: '⚛️' },
   { name: 'TypeScript', icon: '📘' },
   { name: 'Node.js', icon: '🟢' },
   { name: 'Python', icon: '🐍' },
@@ -26,9 +26,9 @@ const technologies = [
 
 const stats = [
   { value: '5+', label: 'Years Experience' },
-  { value: '50+', label: 'Projects Completed' },
-  { value: '30+', label: 'Happy Clients' },
-  { value: '15+', label: 'Awards Won' },
+  { value: '100+', label: 'Projects Completed' },
+  { value: '8', label: 'Happy Clients' },
+  { value: '2', label: 'Awards Won' },
 ];
 
 interface AboutProps {
@@ -59,7 +59,7 @@ const About: React.FC<AboutProps> = ({ profileImage }) => {
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                 <img
                   src={profileImage}
-                  alt="Alex Chen working"
+                  alt="Abdullah Naseem"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -70,21 +70,16 @@ const About: React.FC<AboutProps> = ({ profileImage }) => {
 
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-white">
-                Hello! I'm Alex Chen
+                Hello! I'm Abdullah Naseem
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                I'm a full-stack developer and UI/UX designer based in San Francisco with over 5 years 
-                of experience creating digital products that make a difference. I specialize in building 
-                scalable web applications and crafting intuitive user experiences.
+I am an experienced <b>WordPress and CMS Developer</b> with 5 years of hands-on experience delivering custom websites and eCommerce platforms. I specialize in theme and plugin development, WooCommerce customization, and performance optimization, with a strong focus on scalability and user experience.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                My journey in tech started with a curiosity about how things work, which led me to 
-                pursue a degree in Computer Science. Since then, I've had the privilege of working 
-                with startups, agencies, and Fortune 500 companies, helping them bring their visions to life.
+                I have worked extensively with WordPress, WooCommerce, Shopify, and BigCommerce, building custom solutions such as wishlist systems, discount plugins, AJAX search, custom metafields, and advanced product filtering. I also develop Shopify themes from scratch using Liquid, JavaScript, and CSS.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                When I'm not coding, you'll find me exploring new design trends, contributing to 
-                open-source projects, or sharing knowledge through my blog and tech talks.
+                My technical skill set includes PHP, JavaScript, HTML, CSS, Bootstrap, and jQuery, along with strong expertise in Elementor, Elementor Pro, WP Bakery, Divi, and Avada. I also create visually engaging interfaces using Lottie animations and scroll-based effects with Webflow.
               </p>
 
               {/* Download Resume Button */}
@@ -100,7 +95,7 @@ const About: React.FC<AboutProps> = ({ profileImage }) => {
                   Download Resume
                 </a>
                 <a
-                  href="mailto:alex@example.com"
+                  href="mailto:abdullah.dev1997@gmail.com"
                   className="inline-flex items-center gap-2 px-6 py-3 border border-gray-600 hover:border-indigo-500 text-white font-semibold rounded-xl transition-all duration-200 hover:bg-indigo-500/10"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

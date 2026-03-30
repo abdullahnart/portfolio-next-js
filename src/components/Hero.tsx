@@ -41,12 +41,12 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, profileImage }) => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
               Hi, I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
-                Alex Chen
+                Abdullah Naseem
               </span>
             </h1>
             
             <p className="text-xl sm:text-2xl text-gray-300 mb-4">
-              Full-Stack Developer & UI/UX Designer
+              WordPress & CMS Developer
             </p>
             
             <p className="text-gray-400 text-lg max-w-xl mx-auto lg:mx-0 mb-8">
@@ -134,8 +134,8 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, profileImage }) => {
               <div className="absolute inset-2 rounded-full bg-[#1a1f36]" />
               <img
                 src={profileImage}
-                alt="Alex Chen"
-                className="absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] object-cover rounded-full"
+                alt="Abdullah Naseem"
+                className="absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] object-cover rounded-full object-top"
               />
               {/* Floating badges */}
               <div className="absolute -right-4 top-1/4 px-4 py-2 bg-[#1a1f36]/90 backdrop-blur border border-indigo-500/30 rounded-lg shadow-xl">
@@ -143,7 +143,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, profileImage }) => {
                 <p className="text-gray-400 text-xs">Experience</p>
               </div>
               <div className="absolute -left-4 bottom-1/4 px-4 py-2 bg-[#1a1f36]/90 backdrop-blur border border-purple-500/30 rounded-lg shadow-xl">
-                <p className="text-purple-400 text-sm font-semibold">50+ Projects</p>
+                <p className="text-purple-400 text-sm font-semibold">100+ Projects</p>
                 <p className="text-gray-400 text-xs">Completed</p>
               </div>
             </div>
@@ -159,6 +159,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, profileImage }) => {
         </div></a>
       </div>
     </section>
+    
   );
 };
 

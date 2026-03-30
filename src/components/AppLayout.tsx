@@ -4,9 +4,10 @@ import Hero from './Hero';
 import Projects from './Projects';
 import About from './About';
 import Testimonials from './Testimonials';
-import Blog from './Blog';
+// import Blog from './Blog';
 import Contact from './Contact';
 import Footer from './Footer';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const profileImage = '/images/prof.png';
 
@@ -30,7 +31,7 @@ const AppLayout: React.FC = () => {
 
   // Track active section based on scroll position
   useEffect(() => {
-    const sections = ['home', 'projects', 'about', 'testimonials', 'blog', 'contact'];
+    const sections = ['home', 'projects', 'about', 'testimonials', 'contact'];
     
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
@@ -144,7 +145,7 @@ const AppLayout: React.FC = () => {
         <Testimonials />
 
         {/* Blog Section */}
-        <Blog />
+        {/* <Blog />  */}
 
         {/* Contact Section */}
         <Contact />
