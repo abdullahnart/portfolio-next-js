@@ -780,3 +780,6 @@ h5.timeline-title {color: #4f46e5;}
 
 /* Active state */
 
+.profile-image{
+  object-position: 10% 15%;
+}

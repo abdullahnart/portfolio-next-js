@@ -60,7 +60,7 @@ const About: React.FC<AboutProps> = ({ profileImage }) => {
                 <img
                   src={profileImage}
                   alt="Abdullah Naseem"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover profile-image"
                 />
               </div>
               {/* Decorative elements */}

@@ -70,27 +70,27 @@ const Projects: React.FC = () => {
 
 const educationData = [
   {
-    date: "June 15, 2013 - 2016",
-    title: "Master in Computer Engineering",
-    sub: "First Class",
+    date: "June 15, 2017 - 2019",
+    title: "Bachelor’s in Commerce (B.Com)",
+    sub: "Premier Govt. College",
     description:
-      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+      "Completed coursework in accounting, business management, and economics, building a strong foundation in commerce and financial principles. Graduated with honors, demonstrating academic excellence and a commitment to learning.",
     delay: 400,
   },
   {
-    date: "June 12, 2010 - 2013",
-    title: "Bachelor in Computer Engineering",
-    sub: "First Class",
+    date: "June 12, 2015 - 2017",
+    title: "Intermediate (H.S.C – Commerce)",
+    sub: "Karachi Board",
     description:
-      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+      "Focused on core commerce subjects including accounting, business studies, and economics, developing analytical and problem-solving skills.",
     delay: 600,
   },
   {
-    date: "June 1, 2009 - 2010",
-    title: "Higher Secondary",
-    sub: "(A+)",
+    date: "June 1, 2003 - 2014",
+    title: "Matriculation (S.S.C – Science)",
+    sub: "Bait-us-Salam High School",
     description:
-      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+      "Studied science subjects with a focus on Biology, along with mathematics and general science, developing a strong academic foundation.",
     delay: 800,
   },
 ];
