@@ -80,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, profileImage }) => {
             {/* Social Links */}
             <div className="flex items-center justify-center lg:justify-start gap-4 mt-10">
               <a
-                href="https://github.com"
+                href="https://github.com/abdullahnart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all duration-200"
@@ -91,7 +91,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, profileImage }) => {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/abdullah-naseem-dev/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all duration-200"

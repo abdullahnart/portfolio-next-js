@@ -82,7 +82,7 @@ const educationData = [
     title: "Intermediate (H.S.C – Commerce)",
     sub: "Karachi Board",
     description:
-      "Focused on core commerce subjects including accounting, business studies, and economics, developing analytical and problem-solving skills.",
+      "Focused on core commerce subjects such as accounting, business studies, and economics, gaining strong analytical, financial, and problem-solving skills, with practical understanding of business operations, market dynamics, and economic principles.",
     delay: 600,
   },
   {
@@ -90,32 +90,32 @@ const educationData = [
     title: "Matriculation (S.S.C – Science)",
     sub: "Bait-us-Salam High School",
     description:
-      "Studied science subjects with a focus on Biology, along with mathematics and general science, developing a strong academic foundation.",
+      "Studied science subjects with a focus on Biology, along with Mathematics and General Science, building a strong academic foundation and analytical skills. Completed Matriculation in the Science stream (Biology), preparing for advanced studies in commerce and related fields. Graduated with a solid understanding of scientific principles and critical thinking abilities.",
     delay: 800,
   },
 ];
 
 const experienceData = [
   {
-    date: "March 12, 2020",
-    title: "Envato",
-    sub: "Team Leader",
+    date: "July 12, 2023 - Present",
+    title: "Al Rehman Technology",
+    sub: "Wordpress Developer | CMS Developer",
     description:
-      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+      "Developed custom WooCommerce plugins and advanced features (metafields, filters, AJAX search), including discount and wishlist systems. Built and optimized Shopify themes and BigCommerce stores with advanced customization.",
   },
   {
-    date: "January 23, 2018 - 2020",
-    title: "Facebook Company",
-    sub: "Sr. Developer",
+    date: "December 13, 2021 - 2023",
+    title: "Proficient Digital",
+    sub: "Frontend Developer | CMS Developer",
     description:
-      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+      "Developed custom WordPress themes with Elementor, along with theme/plugin customization and advanced HTML/CSS animation-based websites (including Lottie). Also built Shopify stores and scroll-based animated websites in Webflow.",
   },
   {
-    date: "July 23, 2016 - 2018",
-    title: "Twitter Company",
-    sub: "Jr. Developer",
+    date: "July, 2019 - March, 2020",
+    title: "PNT Global | Digitonics Labs",
+    sub: "Internship | Jr. Developer",
     description:
-      "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
+      "Built and customized WordPress websites with Elementor, Divi, Avada, and WP Bakery, including custom themes, post types, WooCommerce features, payment integrations, and PSD-to-WordPress conversions. Provided client proposals, technical support, QA, speed optimization, and email/template design.",
   },
 ];
 

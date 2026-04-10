@@ -421,8 +421,9 @@
 }
 
 .ms-experience .row {
-    display: flex;
+    display: grid;
     gap: 20px;
+    grid-auto-flow: column;
 }
 .timeline-content p {
     margin-top: 8px;
