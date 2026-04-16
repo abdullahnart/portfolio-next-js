@@ -784,3 +784,27 @@ h5.timeline-title {color: #4f46e5;}
 .profile-image{
   object-position: 10% 15%;
 }
+
+.screen {
+	display: block;
+	height: 350px;
+	overflow: hidden;
+	position: relative;
+	 /* border: 2px solid #b3b3b3; */
+	border-radius: 0.75rem; 
+	margin: 0 auto;
+}
+
+.screen img {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(0);
+	transition: transform 5s linear;
+}
+
+.group:hover .screen img {
+	transform: translateY(calc(-100% + 350px));
+}

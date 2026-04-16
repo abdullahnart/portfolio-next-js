@@ -3,7 +3,7 @@ import { supabase } from '@/lib/supabase';
 import ProjectCard, { Project } from './ProjectCard';
 import ProjectModal from './ProjectModal';
 
-const categories = ['All', 'Web', 'Mobile', 'Branding'];
+const categories = ['All', 'Wordpress', 'Shopify', 'Webflow', 'Wix', 'Custom'];
 
 const Projects: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);

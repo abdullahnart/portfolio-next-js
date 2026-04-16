@@ -38,7 +38,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1e2340] via-transparent to-transparent" />
           </div>

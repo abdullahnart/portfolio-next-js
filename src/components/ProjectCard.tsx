@@ -19,16 +19,18 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails }) => {
   return (
     <div
-      className="group relative bg-[#1e2340] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2"
+      className="group relative bg-[#1e2340] rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2"
       onClick={() => onViewDetails(project)}
     >
       {/* Image Container */}
       <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="screen">
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-cover object-top"
         />
+        </div>
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a1f36] via-[#1a1f36]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         
