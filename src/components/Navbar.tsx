@@ -19,10 +19,11 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => {
 
   const navItems = [
     { id: 'home', label: 'Home' },
+    { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'about', label: 'About' },
-    { id: 'testimonials', label: 'Testimonials' },
-    { id: 'blog', label: 'Blog' },
+    // { id: 'testimonials', label: 'Testimonials' },
+    // { id: 'blog', label: 'Blog' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -47,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => {
               onClick={() => handleNavClick('home')}
               className="text-white font-bold text-xl lg:text-2xl tracking-tight hover:text-indigo-400 transition-colors"
             >
-              <span className="text-indigo-500">A</span>lex.dev
+              <span className="text-indigo-500">Abd</span>ullah.dev
             </button>
           </div>
 
@@ -67,7 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => {
               </button>
             ))}
             <a
-              href="/resume.pdf"
+              href="/Abdullah-naseem-wp-developer-resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-4 px-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-indigo-500/25"
@@ -116,7 +117,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => {
             </button>
           ))}
           <a
-            href="/resume.pdf"
+            href="/Abdullah-naseem-wp-developer-resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-center px-4 py-3 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-all duration-200 mt-4"

@@ -13,38 +13,38 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Sarah Mitchell',
-    role: 'CEO',
+    name: 'David Wilson',
+    role: 'Freelance Client',
     company: 'TechVentures Inc.',
     image: 'https://d64gsuwffb70l.cloudfront.net/6970c8a99e4ef2eb1ce0384f_1768999243699_9a3239e9.jpg',
-    quote: "Alex transformed our vision into reality with exceptional attention to detail. The web application he built has significantly improved our user engagement and conversion rates. His technical expertise combined with design sensibility is truly rare.",
+    quote: "Very quick and professional response fixed my error in 1 hour. A highly recommended seller who fixed my problem very fast at a reasonable price.",
     rating: 5,
   },
   {
     id: 2,
     name: 'Michael Chen',
-    role: 'Product Director',
+    role: 'Founder',
     company: 'InnovateLabs',
-    image: 'https://d64gsuwffb70l.cloudfront.net/6970c8a99e4ef2eb1ce0384f_1768999244750_2f8d3a86.jpg',
-    quote: "Working with Alex was an absolute pleasure. He delivered our mobile app ahead of schedule and exceeded all expectations. His proactive communication and problem-solving skills made the entire development process smooth and efficient.",
+    image: 'https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/381ea973208b5883ccf1cd92d6e4555a-1570317254894/5354bc44-324a-4456-9c8b-f9e072c86bcd.jpeg',
+    quote: "So far the best price-quality ratio that I found on Fiver for Elementor! It shows in his work that he has good knowledge of the tool and does not get lost in the design details.",
     rating: 5,
   },
   {
     id: 3,
     name: 'Emily Rodriguez',
-    role: 'Founder',
-    company: 'DesignStudio Co.',
+    role: 'Freelance Client',
+    company: 'Corpboot',
     image: 'https://d64gsuwffb70l.cloudfront.net/6970c8a99e4ef2eb1ce0384f_1768999243875_6c7e0f11.jpg',
-    quote: "Alex's brand identity work for our company was nothing short of brilliant. He captured our essence perfectly and created a visual language that resonates with our audience. The attention to detail in every deliverable was impressive.",
+    quote: "Excellent WordPress and Shopify developer with strong Elementor skills. He understands custom development, design implementation, and troubleshooting very well, while delivering clean, responsive, and professional websites with great attention to detail.",
     rating: 5,
   },
   {
     id: 4,
-    name: 'David Park',
-    role: 'CTO',
-    company: 'CloudScale Systems',
+    name: 'Mitchell Park',
+    role: 'Project Manager',
+    company: 'Shopify Solutions',
     image: 'https://d64gsuwffb70l.cloudfront.net/6970c8a99e4ef2eb1ce0384f_1768999244996_51193879.jpg',
-    quote: "We hired Alex to rebuild our entire platform, and he delivered an exceptional product. His deep understanding of both frontend and backend technologies, combined with his clean code practices, made him an invaluable partner.",
+    quote: "Strong Shopify developer with solid theme customization skills and quick problem-solving ability, delivering clean and reliable solutions.",
     rating: 5,
   },
 ];
@@ -65,7 +65,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section id="testimonials" className="py-24 bg-[#1a1f36]">
+    <section id="testimonials" className="py-24 bg-[#1a1f36] hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -124,7 +124,7 @@ const Testimonials: React.FC = () => {
                     {testimonials[activeIndex].name}
                   </div>
                   <div className="text-gray-400">
-                    {testimonials[activeIndex].role} at {testimonials[activeIndex].company}
+                    {testimonials[activeIndex].role}
                   </div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Client Logos */}
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <p className="text-center text-gray-500 text-sm mb-8">Trusted by companies worldwide</p>
           <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-50">
             {['TechVentures', 'InnovateLabs', 'DesignStudio', 'CloudScale', 'DataFlow', 'NextGen'].map(
@@ -186,7 +186,7 @@ const Testimonials: React.FC = () => {
               )
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

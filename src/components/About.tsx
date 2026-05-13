@@ -1,27 +1,30 @@
 import React from 'react';
 
 const skills = [
-  { name: 'React / Next.js', level: 95 },
-  { name: 'TypeScript', level: 90 },
-  { name: 'Node.js', level: 88 },
-  { name: 'UI/UX Design', level: 85 },
-  { name: 'Python', level: 80 },
-  { name: 'AWS / Cloud', level: 78 },
+  { name: 'Wordpress', level: 95 },
+  { name: 'HTML', level: 95 },
+  { name: 'CSS', level: 90 },
+  { name: 'Other CMS (Shopify, Webflow, Wix, Squarespace, etc)', level: 90 },
+  { name: 'Customization', level: 75 },
+  { name: 'Javascript', level: 65 },
+  { name: 'Jquery', level: 60 },
+  { name: 'PHP', level: 40 },
+
 ];
 
 const technologies = [
-  { name: 'WordPress', icon: '⚛️' },
-  { name: 'TypeScript', icon: '📘' },
-  { name: 'Node.js', icon: '🟢' },
-  { name: 'Python', icon: '🐍' },
-  { name: 'PostgreSQL', icon: '🐘' },
-  { name: 'MongoDB', icon: '🍃' },
-  { name: 'AWS', icon: '☁️' },
-  { name: 'Docker', icon: '🐳' },
-  { name: 'Figma', icon: '🎨' },
+  { name: 'WordPress', icon: '🟦' },
+  { name: 'Shopify', icon: '🛒' },
+  { name: 'Webflow', icon: '🫧' },
+  { name: 'Wix', icon: '⚡' },
+  { name: 'BigCommerce', icon: '🧺' },
+  { name: 'HTML', icon: '🌐' },
+  { name: 'CSS', icon: '🎨' },
+  { name: 'Bootstrap', icon: '🅱️' },
+  { name: 'JavaScript', icon: '🟨' },
   { name: 'Git', icon: '📦' },
-  { name: 'GraphQL', icon: '◈' },
-  { name: 'Tailwind', icon: '💨' },
+  { name: 'React', icon: '⚛️' },
+  { name: 'API', icon: '🔌' },
 ];
 
 const stats = [
@@ -85,7 +88,7 @@ I am an experienced <b>WordPress and CMS Developer</b> with 5 years of hands-on 
               {/* Download Resume Button */}
               <div className="flex flex-wrap gap-4 pt-4">
                 <a
-                  href="/resume.pdf"
+                  href="/Abdullah-naseem-wp-developer-resume.pdf"
                   download
                   className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-indigo-500/25"
                 >

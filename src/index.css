@@ -448,7 +448,7 @@
 }
 
 section#experience {
-    padding: 80px 0;
+    padding: 80px 0 40px;
 }
 /*--------------------------
   Counter Section
@@ -807,4 +807,15 @@ h5.timeline-title {color: #4f46e5;}
 
 .group:hover .screen img {
 	transform: translateY(calc(-100% + 350px));
+}
+
+
+@media screen and (max-width:880px) {
+  .section-title .ligh-title {
+    display: none;
+}
+ 
+.ms-experience .row {
+    grid-auto-flow: row;
+}
 }
