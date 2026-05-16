@@ -39,9 +39,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const footerLinks = {
     navigation: [
       { label: 'Home', section: 'home' },
+      { label: 'Experience', section: 'testimonials' },
       { label: 'Projects', section: 'projects' },
       { label: 'About', section: 'about' },
-      { label: 'Blog', section: 'blog' },
       { label: 'Contact', section: 'contact' },
     ],
     services: [

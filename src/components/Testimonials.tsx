@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 interface Testimonial {
   id: number;
   name: string;
@@ -17,7 +18,7 @@ const testimonials: Testimonial[] = [
     role: 'Freelance Client',
     company: 'TechVentures Inc.',
     image: 'https://d64gsuwffb70l.cloudfront.net/6970c8a99e4ef2eb1ce0384f_1768999243699_9a3239e9.jpg',
-    quote: "Very quick and professional response fixed my error in 1 hour. A highly recommended seller who fixed my problem very fast at a reasonable price.",
+    quote: "Abdullah delivered the project professionally and improved our website speed significantly. He was responsive, communicative, and went above and beyond to ensure our satisfaction. Highly recommended for WordPress and Shopify development!",
     rating: 5,
   },
   {
@@ -49,6 +50,57 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+const educationData = [
+  {
+    date: "June 15, 2018 - Appyling",
+    title: "Bachelor’s in Commerce (B.Com)",
+    sub: "Premier Govt. College",
+    description:
+      "Completed coursework in accounting, business management, and economics, building a strong foundation in commerce and financial principles. Graduated with honors, demonstrating academic excellence and a commitment to learning.",
+    delay: 400,
+  },
+  {
+    date: "June 12, 2015 - 2017",
+    title: "Intermediate (H.S.C – Commerce)",
+    sub: "Karachi Board",
+    description:
+      "Focused on core commerce subjects such as accounting, business studies, and economics, gaining strong analytical, financial, and problem-solving skills, with practical understanding of business operations, market dynamics, and economic principles.",
+    delay: 600,
+  },
+  {
+    date: "June 1, 2003 - 2014",
+    title: "Matriculation (S.S.C – Science)",
+    sub: "Bait-us-Salam High School",
+    description:
+      "Studied science subjects with a focus on Biology, along with Mathematics and General Science, building a strong academic foundation and analytical skills. Completed Matriculation in the Science stream (Biology), preparing for advanced studies in commerce and related fields. Graduated with a solid understanding of scientific principles and critical thinking abilities.",
+    delay: 800,
+  },
+];
+
+const experienceData = [
+  {
+    date: "July 12, 2023 - Present",
+    title: "Al Rehman Technology",
+    sub: "Wordpress Developer | CMS Developer",
+    description:
+      "Developed custom WooCommerce plugins and advanced features (metafields, filters, AJAX search), including discount and wishlist systems. Built and optimized Shopify themes and BigCommerce stores with advanced customization.",
+  },
+  {
+    date: "December 13, 2021 - 2023",
+    title: "Proficient Digital",
+    sub: "Frontend Developer | CMS Developer",
+    description:
+      "Developed custom WordPress themes with Elementor, along with theme/plugin customization and advanced HTML/CSS animation-based websites (including Lottie). Also built Shopify stores and scroll-based animated websites in Webflow.",
+  },
+  {
+    date: "July, 2019 - March, 2020",
+    title: "PNT Global | Digitonics Labs",
+    sub: "Internship | Jr. Developer",
+    description:
+      "Built and customized WordPress websites with Elementor, Divi, Avada, and WP Bakery, including custom themes, post types, WooCommerce features, payment integrations, and PSD-to-WordPress conversions. Provided client proposals, technical support, QA, speed optimization, and email/template design.",
+  },
+];
+
 const Testimonials: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -65,6 +117,71 @@ const Testimonials: React.FC = () => {
   };
 
   return (
+    <>
+        <section id="testimonials" className="ms-experience pt-20">
+      <div className="container">
+                  <div className="section-title">
+            <h2>
+              My <span>Resume</span>
+            </h2>
+            <span className="ligh-title">Achievements</span>
+          </div>
+        <div className="row">
+
+          {/* Education Column */}
+          <div className="col-lg-6 col-md-12 col-sm-12">
+            <div className="education ms-ex-box m-b-991">
+              <h4>Education</h4>
+              <ul className="timeline">
+                {educationData.map((edu, index) => (
+                  <li
+                    key={index}
+                    className="timeline-item"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                    data-aos-delay={edu.delay}
+                  >
+                    <div className="timeline-info">
+                      <span>{edu.date}</span>
+                    </div>
+                    <div className="timeline-content">
+                      <h5 className="timeline-title">
+                        {edu.title}
+                        <span className="sub">- {edu.sub}</span>
+                      </h5>
+                      <p>{edu.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Experience Column */}
+          <div className="col-lg-6 col-md-12 col-sm-12">
+            <div className="experiense ms-ex-box">
+              <h4>Experience</h4>
+              <ul className="timeline">
+                {experienceData.map((exp, index) => (
+                  <li key={index} className="timeline-item">
+                    <div className="timeline-info">
+                      <span>{exp.date}</span>
+                    </div>
+                    <div className="timeline-content">
+                      <h5 className="timeline-title">
+                        {exp.title}
+                        <span className="sub">- {exp.sub}</span>
+                      </h5>
+                      <p>{exp.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="testimonials" className="py-24 bg-[#1a1f36] hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -189,6 +306,7 @@ const Testimonials: React.FC = () => {
         </div> */}
       </div>
     </section>
+    </>
   );
 };
 

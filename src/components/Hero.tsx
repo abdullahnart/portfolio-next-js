@@ -46,12 +46,11 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, profileImage }) => {
             </h1>
             
             <p className="text-xl sm:text-2xl text-gray-300 mb-4">
-              WordPress & CMS Developer
+              WordPress & Shopify Developer
             </p>
             
             <p className="text-gray-400 text-lg max-w-xl mx-auto lg:mx-0 mb-8">
-              I craft beautiful, user-centric digital experiences that combine stunning visuals 
-              with seamless functionality. Let's build something amazing together.
+              I build modern, responsive, and high-performance websites using WordPress, Shopify, WooCommerce, and custom web technologies.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">

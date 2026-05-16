@@ -135,14 +135,14 @@ const AppLayout: React.FC = () => {
         {/* Hero Section */}
         <Hero onNavigate={handleNavigate} profileImage={profileImage} />
 
+       {/* Testimonials Section */}  
+        <Testimonials />
+
         {/* Projects Section */}
         <Projects />
 
         {/* About Section */}
         <About profileImage={profileImage} />
-
-        {/* Testimonials Section */}
-        <Testimonials />
 
         {/* Blog Section */}
         {/* <Blog />  */}
